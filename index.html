@@ -51,7 +51,22 @@
     <path d="M245 195 L262 160 M262 160 L280 165" fill="none" stroke="#234" stroke-width="7" stroke-linecap="round"/>
     <path d="M160 195 L172 190 L166 180 Z" fill="#234"/>
     <ellipse cx="163" cy="186" rx="14" ry="5" fill="#234"/>
-    <!-- 曲柄+腿（踩踏） -->
+    <!-- 牙盘与后飞轮 -->
+    <g class="wheel" style="transform-box:fill-box;transform-origin:center;animation-duration:1.2s">
+      <circle cx="170" cy="212" r="15" fill="none" stroke="#556" stroke-width="4"/>
+      <circle cx="170" cy="212" r="5" fill="#334"/>
+    </g>
+    <g class="wheel" style="transform-box:fill-box;transform-origin:center;animation-duration:1.2s">
+      <circle cx="105" cy="285" r="9" fill="none" stroke="#556" stroke-width="3"/>
+    </g>
+    <!-- 链条（上松下紧两段+流动虚线） -->
+    <path d="M170 200 Q138 240 107 279" fill="none" stroke="#3a3a3a" stroke-width="3.5" stroke-dasharray="5 3">
+      <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="0.25s" repeatCount="indefinite"/>
+    </path>
+    <path d="M170 224 Q140 260 108 291" fill="none" stroke="#2e2e2e" stroke-width="3.5" stroke-dasharray="5 3">
+      <animate attributeName="stroke-dashoffset" from="0" to="16" dur="0.25s" repeatCount="indefinite"/>
+    </path>
+    <!-- 曲柄+腿（踩踏，与牙盘同轴170,212） -->
     <g class="leg" style="transform-box:fill-box;transform-origin:top center">
       <path d="M170 200 L152 232 L170 244" fill="none" stroke="#e8a33d" stroke-width="9" stroke-linecap="round"/>
       <circle cx="170" cy="244" r="6" fill="#c07f1f"/>
